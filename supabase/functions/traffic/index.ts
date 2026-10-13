@@ -13,7 +13,7 @@
 //
 // Secrets (Edge Functions > Secrets):
 //   TOMTOM_API_KEY   required
-//   ALLOWED_ORIGINS  optional, comma-separated extra sites (the Vercel site is always allowed)
+//   ALLOWED_ORIGINS  optional, comma-separated extra sites (the Vercel sites are always allowed)
 //   REPORT_SALT      optional, used to hash reporter IPs (falls back to the TomTom key)
 // SUPABASE_DB_URL is provided by Supabase automatically.
 
@@ -50,7 +50,7 @@ const sql = DB_URL ? postgres(DB_URL, { prepare: false, max: 3, idle_timeout: 20
 // ---------- small helpers ----------
 // Only the SignalSense site (and its Vercel preview builds) may use this service, so nobody else can
 // spend the TomTom quota. ALLOWED_ORIGINS (comma-separated) adds more sites, e.g. a custom domain.
-const DEFAULT_ORIGINS = ["https://signalsense-byditors.vercel.app"];
+const DEFAULT_ORIGINS = ["https://signalsense-six.vercel.app", "https://signalsense-byditors.vercel.app"];
 const PREVIEW_RE = /^https:\/\/signalsense-[a-z0-9-]+-byditors\.vercel\.app$/;
 function allowedOrigin(req: Request): string | null {
   const extra = (Deno.env.get("ALLOWED_ORIGINS") ?? "").split(",").map((s) => s.trim()).filter(Boolean);

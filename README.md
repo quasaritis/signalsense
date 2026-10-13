@@ -2,7 +2,7 @@
 
 See traffic jams and road blocks in your area, report problems on the road, and check a route before you leave. Built for Indian cities.
 
-Live site: https://signalsense-byditors.vercel.app
+Live site: https://signalsense-six.vercel.app
 
 ## What it does
 
@@ -27,7 +27,7 @@ Traffic data comes from TomTom. Reporters are identified only by a salted hash, 
 Set these in Supabase under Edge Functions > Secrets:
 
 - `TOMTOM_API_KEY` (required)
-- `ALLOWED_ORIGINS` (optional): extra sites allowed to use the service. `signalsense-byditors.vercel.app` and its preview builds are always allowed.
+- `ALLOWED_ORIGINS` (optional): extra sites allowed to use the service. `signalsense-six.vercel.app`, `signalsense-byditors.vercel.app` and preview builds are always allowed.
 - `REPORT_SALT` (optional): salt for hashing reporters
 
 ## Deploying
