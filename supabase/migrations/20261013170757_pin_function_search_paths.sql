@@ -1,0 +1,10 @@
+alter function app.dist_m(double precision, double precision, double precision, double precision) set search_path = '';
+alter function app.lifetime(text) set search_path = '';
+alter function app.submit_report(text, double precision, double precision, text, smallint, text) set search_path = '';
+alter function app.submit_report(text, double precision, double precision, text, smallint, text, text) set search_path = '';
+alter function app.vote_report(uuid, text, text) set search_path = '';
+alter function app.reports_in_bbox(double precision, double precision, double precision, double precision) set search_path = '';
+alter function app.record_jams(jsonb) set search_path = '';
+alter function app.area_hours(double precision, double precision, int, int) set search_path = '';
+alter function app.area_causes(double precision, double precision, int, int) set search_path = '';
+alter function app.hotspots(double precision, double precision, double precision, double precision, int, int, boolean) set search_path = '';
